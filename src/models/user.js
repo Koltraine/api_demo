@@ -10,7 +10,7 @@ class User {
         this.firstName = firstName
         this.foreName = foreName
         this.email = email
-        this.created = utils.formatDate( new Date() )
+        this.created = new Date()
         userMap.set( this.id, this )
     }
 
@@ -24,6 +24,18 @@ class User {
 
     setEmail( email ) {
         this.email = email
+    }
+    
+    toJson() {
+        let pretty = {
+            id: this.id,
+            firstName: this.firstName,
+            foreName: this.foreName,
+            email: this.email,
+            created: utils.formatDate( this.created ),
+        }
+        return JSON.stringify( pretty )
+
     }
 
     static getAll() {

@@ -16,7 +16,12 @@ function formatDate(date) {
   return day + '/' + monthNumber.padStart(2, '0') + '/' + year + ' ' + hour + ':' + minute
 }
 
+function checkEmail( email ) {
+  return /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/.test( email )
+}
+
 module.exports = {
   generator: generator,
   formatDate: formatDate,
+  checkEmail: checkEmail,
 }
