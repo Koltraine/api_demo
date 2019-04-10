@@ -22,7 +22,7 @@ userApi.get( /([0-9]{1,7})/, (req, res) => {
 
 // get all
 userApi.get('/all', (req, res) => {
-    res.send( _.map( User.getAll(), user => user.toJson() ) )
+    res.send( JSON.stringify(_.map( User.getAll(), user => user.toJson() ) ) )
 } )
 
 // update user
