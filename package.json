@@ -1,0 +1,17 @@
+{
+  "name": "api_demo",
+  "version": "1.0.0",
+  "main": "src/api.js",
+  "author": "Vicente Sousa",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "debug": "node src/main.js --inspect"
+  }
+}
